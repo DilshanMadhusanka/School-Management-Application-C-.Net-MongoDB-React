@@ -1,6 +1,20 @@
+using SchoolManagementApplication.Data;
+using SchoolManagementApplication.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+// add the midlewears to connect with the mongodb databse
+
+builder.Services.Configure<DataBaseSetting>(
+   builder.Configuration.GetSection("ConnectionStrings"));
+
+builder.Services.AddSingleton<StudentServices>();  // dependancy injection 
+
+
+
+
 
 builder.Services.AddControllersWithViews();
 

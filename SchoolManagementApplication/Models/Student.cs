@@ -5,6 +5,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace SchoolManagementApplication.Models
 
 {
+    [BsonIgnoreExtraElements]
     public class Student
     {
         [BsonId]
