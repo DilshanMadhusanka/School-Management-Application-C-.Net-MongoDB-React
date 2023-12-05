@@ -16,7 +16,7 @@ namespace SchoolManagementApplication.Services
             _studentCollection = mongoDb.GetCollection<Student>(settings.Value.CollectionName);
         }
 
-        // Get all student 
+        // Get all student list
         public async Task <List<Student>>GetAsync() =>await _studentCollection.Find(_ =>true). ToListAsync();
 
 
