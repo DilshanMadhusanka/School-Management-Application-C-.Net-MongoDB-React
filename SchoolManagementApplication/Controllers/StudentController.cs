@@ -4,6 +4,8 @@ using SchoolManagementApplication.Services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
+// set the CRUD operations 
+
 namespace SchoolManagementApplication.Controllers
 {
     [Route("api/student")]
@@ -13,7 +15,7 @@ namespace SchoolManagementApplication.Controllers
 
         private readonly StudentServices _studentServices;
 
-        public StudentController(StudentServices studentServices)
+         public StudentController(StudentServices studentServices)
         {
             _studentServices = studentServices;
         }
@@ -28,7 +30,7 @@ namespace SchoolManagementApplication.Controllers
 
 
 
-        // GET api/student/656b6330a183be1c0c320031
+        // GET api/student/656b6330a183be1c0c320031     // methena dala thiyan anka tika mongoDb eke student table eke id eka 
 
         [HttpGet("{id :length(24)}")]
         public async Task<ActionResult<Student>>  Get(String id)
