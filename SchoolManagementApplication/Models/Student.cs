@@ -11,7 +11,7 @@ namespace SchoolManagementApplication.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
 
-        public String Id { get; set; }  = String.Empty;
+        public String Id { get; set; }  = String.Empty; // initialize the variable
 
         [BsonElement("firstName")]
         public string FirstName { get; set; } = "Student First Name";
