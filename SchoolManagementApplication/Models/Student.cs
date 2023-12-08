@@ -7,7 +7,8 @@ namespace SchoolManagementApplication.Models
 {
     [BsonIgnoreExtraElements]
     public class Student
-    {
+    { 
+        // set the properties
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
 
