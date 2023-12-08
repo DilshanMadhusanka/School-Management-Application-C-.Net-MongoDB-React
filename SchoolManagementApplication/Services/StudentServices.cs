@@ -31,7 +31,7 @@ namespace SchoolManagementApplication.Services
            await _studentCollection.InsertOneAsync(newStudent);
 
 
-        // Update student 
+        // Update student details
         public async Task UpdateAsync(String id, Student upateStudent) =>
             await _studentCollection.ReplaceOneAsync(x => x.Id == id, upateStudent);
 
